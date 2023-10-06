@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+/* 
+Light 300
+Regular 400
+Medium 500
+SemiBold 600
+Bold 700
+ExtraBold 800
+Black 900
+*/
+/* ========================= pre-setting ========================= */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border;
+}
+:root {
+    --primary: #8E2DE2; 
+    --secondary: #4A00E0;
+    --primary-bg: #0B0B0B;
+    --secondary-bg: #151320;
+    --secondary-bg-hover: #1F1F30;
+    --black: #13131E;
+    --white: #E9EBF8;
+    --grey: #8E98A8;
+    --yellow: #DAC25A;
+    --whatsapp: #25D366;
+    --primary-button: #7330DF;
+    --primary-button-hover: #682BC9;
+    --error: #FA113D;
+    --sucess: #4BB543;
+}
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    background: var(--primary);
+    transition: all 0.5s ease-in-out;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #682BC9;
+}
+html{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    transition: .5s;
+}
+body{
+    font-family: 'Inter', sans-serif;
+    background-color: var(--secondary-bg-hover);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-attachment: fixed;
+    background-size: 100%;
+    /* height: 300vh; */
+    position: relative;
+}
+h1, h3{
+    color: var(--black);
+    font-weight: 600;
+    opacity: 0.7;
+}
+h1{
+    font-size: 28px;
+    line-height: 1.4;
+    letter-spacing: 1px;
+    text-align: center;
+}
+h2{
+    font-size: 36px;
+    margin-bottom: 12px;
+}
+h3{
+    font-size: 15px;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+p{
+    color: var(--grey);
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.5;   
+}
+a{
+    text-decoration: none;
+}
+ul li{
+    list-style: none;
+}
+input{
+    height: 40px;
+    padding: 0 20px;
+    background-color: rgba(108, 119, 193, 0.1);
+    border: 1px solid var(--grey);
+    border-radius: 5px;
+    outline: none;
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+textarea{
+    background-color: rgba(108, 119, 193, 0.1);
+    border: 1px solid var(--grey);
+    border-radius: 5px;
+    padding: 12px 20px;
+    outline: none;
+    height: 120px;
+}
+label{
+    margin-top: 16px;
+}
+/* -------- most wanted classes -------- */
+.center{
+    max-width: 1324px;
+    margin: 0 auto;
+    padding: 44px 0;
+    transition: .5s;
+}
+.display-flex-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.display-flex-column{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.btn{
+    padding: 12px 24px;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 600;
+}
+.hidden{
+    display: none;
+    transition: .3s;
+}
+.cursor-pointer{
+    cursor: pointer;
+}
+.cursor-not-allowed{
+    cursor: not-allowed;
+}
+/* -------- buttons -------- */
+.primary-button{
+    color: var(--white);
+    background-color: var(--primary-button);
+    transition: .3s;
+}
+.primary-button:hover{
+    background-color: var(--primary-button-hover);
+    transition: .3s;
+}
+.secondary-button{
+    color: var(--black);
+    background-color: var(--white);
+    transition: .3s;
+}
+.secondary-button:hover{
+    background-color: #D2D4DF;
+    transition: .3s;
+}
+/* -------- overlay -------- */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(3px);
+    z-index: 98;
+}
+.overlay-purple {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(142, 45, 226, 0.15);
+    z-index: 97;
+}
+/* -------- to top button -------- */
+#to-top-button {
+    display: none;
+    position: fixed;
+    bottom: 20px; 
+    right: 30px; 
+    z-index: 99; 
+    border: none;
+    outline: none;
+    background-color: var(--primary-button); 
+    color: var(--white); 
+    cursor: pointer; 
+    padding: 12px; 
+    border-radius: 5px; 
+    z-index: 96;
+}
+#to-top-button img{
+    width: 18px;
+    height: 18px;
+} 
+#to-top-button:hover {
+    background-color: var(--primary-button-hover);
+}
+/* ========================= form-section ========================= */
+.login-gif{
+    width: 100px;
+    position: relative;
+    width: 50%;
+    height: 100vh;
+    
+}
+.login-gif img{
+    position: absolute;
+    width: 600px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.form-container{
+    float: right;
+    width: 50%;
+    height: 100vh;
+    background-color: #fff;
+    position: relative;
+}
+
+.form-content{
+    /* debugguer */
+    /* background-color: var(--white);  */
+    position: absolute;
+    width: 500px;
+    height: 700px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.mid-form div{
+    width: 100%;
+}
+
+.mid-form div:nth-child(1){
+    margin-right: 8px;
+}
+.mid-form div:nth-child(2){
+    margin-left: 4px;
+}
+
+.form-content span{
+    font-size: 12px;
+    color: var(--error);
+    opacity: 0;
+}
+.form-buttons{
+    margin-top: 16px;
+}
+.form-buttons a{
+    background-color: #fff;
+    color: var(--grey);
+    border: 1px solid var(--grey);
+}
+.form-buttons a:hover{
+    background-color: #fff;
+    color: var(--primary);
+    border: 1px solid var(--primary);
+
+}
+.form-buttons button{
+    border: 1px solid var(--primary);
+    cursor: pointer;
+}
+.logo-back a{
+    position: absolute;
+    top: 80px;
+    left: 50px;
+    opacity: 0.2;
+}
+@media only screen and (max-width: 1024px){
+    .login-gif{
+        display: none;
+    }
+    .form-container{
+        width: 100%;
+        height: 100vh;
+        background-color: #fff;
+        position: relative;
+    }
+    .form-content{
+        /* debugguer */
+        /* background-color: var(--white);  */
+        position: absolute;
+        max-width: 360px;
+        height: auto;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .logo-back a{
+        display: none;
+    }
+    .mid-form{
+        flex-direction: column;
+    }
+}
